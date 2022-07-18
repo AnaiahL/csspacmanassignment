@@ -1,0 +1,612 @@
+/* CSS Document */
+
+/* Defaults */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Nav */
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ol {
+    margin: 0;
+}
+
+nav ol li {
+    display: inline-block;
+    padding: 10px 40px 40px 0px;
+}
+
+nav ol li a {
+    color: rgb(255, 255, 255);
+    transition: .5s all ease-in-out;
+    text-decoration: none;
+}
+
+nav ol li a:hover {
+    color: #F9Ed3F;
+}
+
+/* Header (Home) */
+
+.pacmanlogo {
+    display: flex;
+    justify-content: center;
+}
+
+.pacman-ghosts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.pacman-ghosts div img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Reflecting pacman gif */
+
+.pacmanmoving img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    padding-left: 100px;
+}
+
+/* Animation 1 */
+
+    /* Pacman running from ghosts animation */
+
+    .pacmanmoving {
+        animation-name: pacmanrunningaway;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+
+    @keyframes pacmanrunningaway {
+        from{transform:translate(1200px)}
+        to{transform:translate(-1200px)}
+    }
+
+    /* Ghosts chasing pacman animation */
+
+    .ghostschasingpacman {
+        display: flex;
+        flex-direction: row;
+        animation-name: ghostschasingpacman;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+
+    @keyframes ghostschasingpacman{
+        from{transform:translate(1200px)}
+        to{transform:translate(-1200px)}
+    }
+
+.pinky img {
+    padding-right: 20px;
+}
+
+.inky img {
+    padding-right: 20px;
+}
+
+.blinky img {
+    padding-right: 20px;
+}
+
+.clyde img {
+    padding-right: 20px;
+}
+
+/* Blinking Insert Coins Animation */
+
+.insertcoins {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 10px;
+    animation-name: blinker;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* High Scores Section */
+
+.readyheader {
+    display: flex;
+    justify-content: center;
+    color: #F9ED3F;
+    margin-top: 200px;
+    font-size: 18px;
+}
+
+.bestplayers {
+    display: flex;
+    justify-content: center;
+}
+
+.highscoregrid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-top: 20px;
+
+}
+
+.rank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.rank div p {
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+}
+
+#rankheader {
+    margin-bottom: 30px;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score div p {
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+}
+
+#scoreheader {
+    margin-bottom: 30px; 
+}
+
+.initials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.initials div p {
+    padding: 0;
+    margin: 0;
+    line-height: 30px;
+}
+
+#initialsheader {
+    margin-bottom: 30px; 
+}
+
+/* Styling font colors of "rank" */
+
+    /* Orange */
+
+    .rank div:nth-child(2) {
+        color: #FFA002;
+    }
+
+    .rank div:nth-child(6) {
+        color: #FFA002;
+    }
+
+    .rank div:nth-child(10) {
+        color: #FFA002;
+    }
+
+    /* Red */
+
+    .rank div:nth-child(3) {
+        color: #FF0401;
+    }
+
+    .rank div:nth-child(7) {
+        color: #FF0401;
+    }
+
+    .rank div:nth-child(11) {
+        color: #FF0401;
+    }
+
+    /* Light blue */
+
+    .rank div:nth-child(4) {
+        color: #01f8f8;
+    }
+
+    .rank div:nth-child(8) {
+        color: #01f8f8;
+    }
+
+    /* Baby pink */
+
+    .rank div:nth-child(5) {
+        color: #FF60B0;
+    }
+        
+    .rank div:nth-child(9) {
+        color: #FF60B0;
+    }
+
+/* Styling font colors of "score" */
+
+    /* Orange */
+
+    .score div:nth-child(2) {
+        color: #FFA002;
+    }
+
+    .score div:nth-child(6) {
+        color: #FFA002;
+    }
+
+    .score div:nth-child(10) {
+        color: #FFA002;
+    }
+
+    /* Red */
+
+    .score div:nth-child(3) {
+        color: #FF0401;
+    }
+
+    .score div:nth-child(7) {
+        color: #FF0401;
+    }
+
+    .score div:nth-child(11) {
+        color: #FF0401;
+    }
+
+    /* Light blue */
+
+    .score div:nth-child(4) {
+        color: #01f8f8;
+    }
+
+    .score div:nth-child(8) {
+        color: #01f8f8;
+    }
+
+    /* Baby pink */
+
+    .score div:nth-child(5) {
+        color: #FF60B0;
+    }
+        
+    .score div:nth-child(9) {
+        color: #FF60B0;
+    }
+
+/* Styling font color of "Initials */
+
+    /* Orange */
+
+    .initials div:nth-child(2) {
+        color: #FFA002;
+    }
+
+    .initials div:nth-child(6) {
+        color: #FFA002;
+    }
+
+    .initials div:nth-child(10) {
+        color: #FFA002;
+    }
+
+    /* Red */
+
+    .initials div:nth-child(3) {
+        color: #FF0401;
+    }
+
+    .initials div:nth-child(7) {
+        color: #FF0401;;
+    }
+
+    .initials div:nth-child(11) {
+        color: #FF0401;;
+    }
+
+    /* Light blue */
+
+    .initials div:nth-child(4) {
+        color: #01f8f8;
+    }
+
+    .initials div:nth-child(8) {
+        color: #01f8f8;
+    }
+
+    /* Baby pink */
+
+    .initials div:nth-child(5) {
+        color: #FF60B0;
+    }
+        
+    .initials div:nth-child(9) {
+        color: #FF60B0;
+    }
+
+/* How to play section */
+
+.pacman-ghosts2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pacman-ghosts2 div img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Animation #2 */
+
+    /* Pacman chasing ghosts offscreen animation */
+
+    .pacmangifmove {
+        margin-right: 100px;
+        animation-name: pacmanChasingBlueGhosts;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+
+    @keyframes pacmanChasingBlueGhosts{
+        from{transform:translate(-1200px)}
+        to{transform:translate(1200px)}
+    }
+
+    /* Blue ghosts running away from pacman offscreen animation */
+
+    .blueghoststransform {
+        display: flex;
+        flex-direction: row;
+        animation-name: runningBlueGhosts;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+
+    @keyframes runningBlueGhosts{
+        from{transform:translate(-1200px)}
+        to{transform:translate(1200px)}
+    }
+
+.blueghost1{
+    padding-right: 20px;
+}
+
+.blueghost2{
+    padding-right: 20px;
+}
+
+.blueghost3{
+    padding-right: 20px;
+}
+
+.blueghost4{
+    padding-right: 20px;
+}
+
+.howtoplayheader {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Styling the first line of "How to Play" section in yellow */
+
+.howtoplayparagraph p:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 9px;
+    font-size: 24px;
+    color:#F9ED3F;
+}
+
+.howtoplayparagraph p:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 0;
+    line-height: 30px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: none;
+}
+
+/* Players Section */
+
+.playersheader {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+.characters {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.playersghosts {
+    display: flex;
+    justify-content: center;
+}
+
+.ghostcolumn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.ghostcolumn img {
+    height: 50px;
+    width: 50px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.playernames {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.ghostnames {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    margin-left: 100px;
+}
+
+/* Styling Player Character names using nth-child */
+
+    .playernames p:nth-child(1) {
+        color: #FF0401;;
+    }
+
+    .playernames p:nth-child(2) {
+        color:#FF60B0;
+    }
+
+    .playernames p:nth-child(3) {
+        color:#01f8f8;
+    }
+
+    .playernames p:nth-child(4) {
+        color:#FFA002;
+    }
+
+/* Styling Player Nicknames using nth-child */
+
+    .ghostnames p:nth-child(1) {
+        color: #FF0401;
+    }
+
+    .ghostnames p:nth-child(2) {
+        color:#FF60B0;
+    }
+
+    .ghostnames p:nth-child(3) {
+        color:#01f8f8;
+    }
+
+    .ghostnames p:nth-child(4) {
+        color: #FFA002;
+    }
+
+#redblinky {
+    margin-top: 10px;
+}
+
+#pinkpinky {
+    margin-top: 20px;
+}
+
+#blueinky {
+    margin-top: 23px;
+}
+
+#orangeclyde {
+    margin-top: 24px;
+}
+
+.twohundredpts {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 80px;
+}
+
+.twohundredpts p {
+    margin-right: 50px;
+}
+
+.blueghoststwo img {
+    width: 50px;
+    height: 50px;
+}
+
+.fiftypts {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.fiftypts p {
+    margin-right: 50px;
+}
+
+.fiftypts img {
+    width: 25px;
+    height: 25px;
+    margin-top: 23px;
+}
+
+.tenpts {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.tenpts p {
+    margin-right: 50px;
+}
+
+.tenpts img {
+    height: 10px;
+    width: 10px;
+    margin-top: 30px;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    margin-top: 200px;
+}
